@@ -1,0 +1,25 @@
+@{
+  ViewData["Title"] = "Create Message";
+}
+
+@model MessageBoardClient.Models.Message
+
+<h4>Add a new message to the message board</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Subject)
+  @Html.TextBoxFor(model => model.Subject)
+  <br>
+  @Html.LabelFor(model => model.Body)
+  @Html.TextBoxFor(model => model.Body)
+  <br>
+  @Html.LabelFor(model => model.Group)
+  @Html.TextBoxFor(model => model.Group)
+  <br>
+  <br>
+  <input type="submit" value="Add new message" class="btn btn-primary"/>
+}
+
+<br>
+<p>@Html.ActionLink("Back to all messages", "Index")</p>

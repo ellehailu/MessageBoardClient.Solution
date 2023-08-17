@@ -7,4 +7,6 @@
 <p>Subject: @Model.Subject</p>
 <p>Body: @Model.Body</p>
 
-@Html.ActionLink("Return to all messages", "Index") 
+@Html.ActionLink("Return to all messages", "Index")
+@Html.ActionLink("Edit details", "Edit", new { id = @Model.MessageId })
+@Html.ActionLink("Delete message", "Delete", new { id = @Model.MessageId })

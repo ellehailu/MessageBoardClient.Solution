@@ -1,12 +1,17 @@
 @{
-    ViewData["Title"] = "Messages";
+  ViewData["Title"] = "Messages";
 }
 
 <h1>All Messages:</h1>
 
 <ol>
-@foreach (Message message in Model)
-{
-  <li><strong>@message.Group</strong> the @message.Subject | <a href="/Messages/Details/@(message.MessageId)">View Details</a></li>
-}
+  @foreach (Message message in Model)
+  {
+    <li>
+      <strong>@message.Group</strong> the @message.Subject |
+      <a href="/Messages/Details/@(message.MessageId)">View Details</a>
+    </li>
+  }
 </ol>
+
+@Html.ActionLink("Add new message", "Create") 
