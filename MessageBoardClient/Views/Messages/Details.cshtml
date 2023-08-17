@@ -1,0 +1,10 @@
+@{
+    ViewData["Title"] = $"Details for {Model.Subject}";
+}
+
+<h1>Group: @Model.Group</h1>
+
+<p>Subject: @Model.Subject</p>
+<p>Body: @Model.Body</p>
+
+@Html.ActionLink("Return to all messages", "Index") 
